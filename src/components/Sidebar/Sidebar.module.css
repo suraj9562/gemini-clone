@@ -21,13 +21,17 @@
   margin-top: 3rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.5rem;
   padding: 0.8rem 1.2rem;
   background-color: #e6eaf1;
   border-radius: 4rem;
-  font-size: 1.2rem;
+
   color: grey;
   cursor: pointer;
+}
+
+.sidebar .top .newChat p {
+  font-size: 1.2rem;
 }
 
 .sidebar .top .recent {

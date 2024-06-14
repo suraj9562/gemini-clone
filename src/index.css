@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: none;
+  outline: none;
   font-size: 15px;
   font-family: outfit;
 }
@@ -11,4 +13,25 @@
 #root {
   min-height: 100vh;
   display: flex;
+}
+
+/* Scroll bar stylings */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f0f9f0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c4c7c4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f0f9f0;
 }
