@@ -83,7 +83,15 @@ const Main = () => {
             </div>
             <div className={styles.resultData}>
               <img src={assets.gemini_icon} alt="🤖" />
-              <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              {loading ? (
+                <div className={styles.loader}>
+                  <hr />
+                  <hr />
+                  <hr />
+                </div>
+              ) : (
+                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              )}
             </div>
           </div>
         </>
