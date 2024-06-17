@@ -27,16 +27,11 @@ const Main = () => {
     input,
     setInput,
     recentPrompt,
-    setRecentPrompt,
-    previousPrompts,
-    setPreviousPrompts,
     showResult,
-    setShowResult,
     loading,
-    setLoading,
     resultData,
-    setResultData,
     onSent,
+    loadPrompt,
   } = useContext(Context);
 
   return (
@@ -59,13 +54,15 @@ const Main = () => {
 
             <div className={styles.cards}>
               {cards &&
-                cards.map((idx) => {
+                cards.map(({ data, image }, idx) => {
                   return (
-                    <div className={styles.card} key={idx}>
-                      <p>
-                        Suggest beautiful places to see on an upcoming road trip
-                      </p>
-                      <img src={assets.compass_icon} alt="" />
+                    <div
+                      className={styles.card}
+                      key={idx}
+                      onClick={() => loadPrompt(data)}
+                    >
+                      <p>{data}</p>
+                      <img src={assets[image]} alt="" />
                     </div>
                   );
                 })}
